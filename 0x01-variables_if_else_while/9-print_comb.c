@@ -19,8 +19,11 @@ int main(void)
 		else
 		{
 			putchar(number);
-			putchar(comma);
-			putchar(' ');
+			if(number != 57)
+			{
+				putchar(comma);
+				putchar(' ');
+			}
 		}
 	}
 
