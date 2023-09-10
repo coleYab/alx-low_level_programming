@@ -19,7 +19,7 @@ int main(void)
 		else
 		{
 			putchar(number);
-			if(number != 57)
+			if (number != 57)
 			{
 				putchar(comma);
 				putchar(' ');
