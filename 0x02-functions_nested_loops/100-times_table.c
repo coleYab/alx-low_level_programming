@@ -3,6 +3,8 @@
 /**
  * print_times_table - prints a random time taable
  *
+ * @n: the number to print
+ *
  * Return: Void
  */
 void print_times_table(int n)
@@ -37,6 +39,4 @@ void print_times_table(int n)
 			}
 		}
 	}
-	else
-		_putchar('\n');
 }
