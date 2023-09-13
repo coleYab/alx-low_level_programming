@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * main - print the sum of natural numbers
  *
  * Return: Always 0
