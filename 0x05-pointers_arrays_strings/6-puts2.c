@@ -6,14 +6,16 @@
  *
  * Return: void
  */
-void puts2(char *str);
+void puts2(char *str)
 {
 	int length = 0;
 
 	while (*str)
 	{
-		if (length++ % 2 == 0)
-			_putchar(*(str++));
+		if (length % 2 == 0)
+			_putchar(*str);
+		length++;
+		str++;
 	}
 	_putchar('\n');
 }
