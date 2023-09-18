@@ -1,17 +1,36 @@
 #include "main.h"
 /**
- * _strcpy - copy string
- * @dest: destination
- * @src: initial file
- * Return: 0 in copmilation
- */
+ * _strlen - finds and returns the length of a string
+ * @s: string to be tested
+ * Return: length of the given string
+*/
+int _strlen(char *s)
+
+{
+	int lenth = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
+}
+/**
+ *_strcpy - copies a string
+ * @dest: parameter two
+ * @src: parameter one
+ * Return: the dest adress
+*/
 
 char *_strcpy(char *dest, char *src)
 {
-	int index;
+	int j, length = _strlen(src);
 
-	for (index = 0; src[index] != '0'; index++)
-		dest[index] = src[index];
-	dest[index] = '\0';
+	for (j = 0; j <= length; j++)
+	{
+		dest[j] = src[j];
+	}
+
 	return (dest);
 }
