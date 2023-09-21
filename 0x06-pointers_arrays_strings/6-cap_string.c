@@ -1,47 +1,31 @@
 #include "main.h"
 
 /**
- * is_separator - Checks if a character is a separator.
- * @c: The character to check.
- *
- * Return: 1 if the character is a separator, 0 otherwise.
+ * cap_string - capitalizing is important
+ * @s: the parameter passed
+ * Return: the capitalized adress
  */
-int is_separator(char c)
+char *cap_string(char *s)
 {
-	char separators[] = " \t\n,;.!?\"(){}";
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	for (int i = 0; separators[i] != '\0'; i++)
+	while (*(s + i))
 	{
-		if (c == separators[i])
-			return (1);
-	}
-
-	return (0);
-}
-
-/**
- * cap_string - Capitalizes the first character of each word in a string.
- * @str: The input string.
- *
- * Return: A pointer to the modified string.
- */
-char *cap_string(char *str)
-{
-	int capitalize_next = 1;
-
-	if (str == NULL)
-		return (NULL);
-	for (int i = 0; str[i] != '\0'; i++)
-	{
-		if (is_separator(str[i]))
-			capitalize_next = 1;
-		else if (capitalize_next)
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] = str[i] - ('a' - 'A');
-			capitalize_next = 0;
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
+			}
 		}
+		i++;
 	}
-
-	return (str);
+	return (s);
 }

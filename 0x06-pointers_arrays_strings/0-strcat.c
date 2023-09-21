@@ -6,24 +6,23 @@
  * @dest: parameter 1
  * @src: parameter 2
  *
- * Return: pointer dest
+ * Return: pointer destnation
  */
 char *_strcat(char *dest, char *src)
 {
-	int length = 0;
-	int count = 0;
+	char *s = dest;
 
-	while (*src)
+	while (*dest != '\0')
 	{
+		dest++;
+	}
+
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
 		src++;
-		length++;
 	}
-	while (src[count] != '\0')
-	{
-		dest[length] = src[count++];
-		length++;
-	}
-	dest[length] = '\0';
-
-	return (dest);
+	*dest = '\0';
+	return (s);
 }
