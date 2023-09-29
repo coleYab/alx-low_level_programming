@@ -9,24 +9,26 @@
  */
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n < 2)
 		return (0);
-	return (is_prime(n, n - 1));
+	else
+		return (check_prime(n, n - 1));
 }
 
 /**
- * is_prime - to check the number
+ * check_prime - to check the number
  *
- * @a: parameter one
- * @b: paramter two
+ * @n: parameter one
+ * @x: paramter two
  *
  * Return: the result
  */
-int is_prime(int a, int b)
+int check_prime(int n, int x)
 {
-	if (b == 1)
+	if (x == 1)
 		return (1);
-	else if (a % b == 0)
+	else if (n % x == 0)
 		return (0);
-	return (is_prime(a, b - 1));
+	else
+		return (check_prime(n, x - 1));
 }

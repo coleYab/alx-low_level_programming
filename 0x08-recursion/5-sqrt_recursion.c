@@ -25,7 +25,7 @@ int is_sqr(int x, int y)
 	if (y * y == x)
 		return (y);
 	else if ((x == y && y * y != x) || x <= 0)
-		return (0);
+		return (-1);
 	else
 		return (is_sqr(x, y + 1));
 }
