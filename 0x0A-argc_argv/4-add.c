@@ -11,11 +11,6 @@ int main(int argc, char *argv[])
 {
 	int i, j, result = 0;
 
-	if (argc == 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
