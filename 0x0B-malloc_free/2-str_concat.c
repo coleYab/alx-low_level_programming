@@ -11,13 +11,15 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len = 0, i, j;
 	char *copy;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	for (i = 0; s1[i]; i++)
 		len++;
 	for (i = 0; s2[i]; i++)
 		len++;
 
 	copy = malloc(sizeof(char) * len + 1);
-	if (!copy)
+	if (copy == NULL)
 		return (NULL);
 	for (i = 0, j = 0; s1[i]; i++, j++)
 		copy[i] = s1[i];
