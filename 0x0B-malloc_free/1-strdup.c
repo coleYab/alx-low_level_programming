@@ -17,7 +17,7 @@ char *_strdup(char *str)
 
 
 	if (!str || !copy)
-		return (0);
+		return (NULL);
 	for (i = 0; i < length; i++)
 		copy[i] = str[i];
 	copy[i] = '\0';
