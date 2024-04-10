@@ -3,7 +3,8 @@
 /**
  * linear_search - function to implement linear search.
  * @array: the array to be searched.
- * @size: the size of arr.
+ * @size: the size of arr
+ * @value: the value to be search.
  * Return: the index or -1.
 */
 int linear_search(int *array, size_t size, int value)
@@ -14,8 +15,8 @@ int linear_search(int *array, size_t size, int value)
 	{
 		printf("Value checked array[%d] = [%d]\n", idx, array[idx]);
 		if (array[idx] == value)
-			return idx;
+			return (idx);
 	}
 
-	return -1;
+	return (-1);
 }
