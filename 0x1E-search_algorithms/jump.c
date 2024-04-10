@@ -1,20 +1,19 @@
+#include <math.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 
 int jump_search(int *array, int size, int value)
 {
-    int idx, m = 3;
+    int idx, m = sqrt(size);
     // Lets test with jumping m units first
     for (idx = 0; idx < size; idx += 3)
     {
-        if (array[idx] == value)
-            return (idx);
-        else if (array[idx] > value)
+       	if (array[idx] >= value)
             break;
     }
 
-    for (int o_val = idx - m; o_val < idx && o_val < size; o_val++)
+    for (int o_val = idx - m; o_val <= idx && o_val < size; o_val++)
         if (array[o_val] == value)
             return (o_val);
     return (-1);
