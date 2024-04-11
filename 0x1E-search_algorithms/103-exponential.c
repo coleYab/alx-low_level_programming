@@ -1,8 +1,3 @@
-/*
- * File: 103-exponential.c
- * Auth: George Kabucho
- */
-
 #include "search_algos.h"
 
 /**

@@ -1,8 +1,3 @@
-/*
- * File: 105-jump_list.c
- * Auth: George Kabucho
- */
-
 #include "search_algos.h"
 
 /**

@@ -1,8 +1,3 @@
-/*
- * File: 106-linear_skip.c
- * Auth: George Kabucho
- */
-
 #include "search_algos.h"
 
 /**
